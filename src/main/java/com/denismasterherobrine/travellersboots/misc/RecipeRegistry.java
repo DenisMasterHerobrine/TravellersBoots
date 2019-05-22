@@ -32,5 +32,14 @@ public class RecipeRegistry {
                 'B', ItemRegistry.travellersbootsmkii,
                 'I', Blocks.DIAMOND_BLOCK
         });
+        GameRegistry.addShapedRecipe(new ResourceLocation("boots_mk4"), new ResourceLocation("boots_mk4"), new ItemStack(ItemRegistry.travellersbootsmkiv), new Object[]{
+                "DBD",
+                "LIL",
+                "   ",
+                'L', Items.EMERALD,
+                'B', ItemRegistry.travellersbootsmkiii,
+                'I', Blocks.EMERALD_BLOCK,
+                'D', Items.DIAMOND
+        });
     }
 }
