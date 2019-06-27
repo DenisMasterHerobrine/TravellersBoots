@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "DTD",
+    "DBD",
+    "   "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:diamond_block"
+    },
+    "T": {
+      "item": "travellersboots:travellersbootmkii"
+    }
+  },
+  "result": {
+    "item": "travellersboots:travellersbootmkiii",
+    "count": 1
+  }
+}

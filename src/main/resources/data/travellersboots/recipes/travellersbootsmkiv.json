@@ -1,0 +1,26 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "DTD",
+    "EBE",
+    "   "
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "B": {
+      "item": "minecraft:emerald_block"
+    },
+    "T": {
+      "item": "travellersboots:travellersbootmkiii"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "travellersboots:travellersbootmkiv",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "GTG",
+    "GBG",
+    "   "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "B": {
+      "item": "minecraft:gold_block"
+    },
+    "T": {
+      "item": "travellersboots:travellersbootmki"
+    }
+  },
+  "result": {
+    "item": "travellersboots:travellersbootmkii",
+    "count": 1
+  }
+}

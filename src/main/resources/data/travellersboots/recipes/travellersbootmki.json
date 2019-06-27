@@ -1,0 +1,23 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "LBL",
+        "LIL",
+        "   "
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "L": {
+            "item": "minecraft:leather"
+        },
+        "B": {
+            "item": "minecraft:iron_boots"
+        }
+    },
+    "result": {
+        "item": "travellersboots:travellersbootmki",
+        "count": 1
+    }
+}
