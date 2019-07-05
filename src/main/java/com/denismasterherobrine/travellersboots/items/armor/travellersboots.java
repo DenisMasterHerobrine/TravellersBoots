@@ -27,23 +27,21 @@ public class travellersboots extends ItemArmor
 
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-        if (player.inventory.armorItemInSlot(0) != null) {
-            if (player.inventory.armorItemInSlot(0).getItem() == ItemRegistry.travellersbootsmki) {
+            if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmki)) {
                 player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1, 0));
             }
-            if (player.inventory.armorItemInSlot(0).getItem() == ItemRegistry.travellersbootsmkii) {
+            if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii)) {
                 player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1, 0));
                 player.stepHeight = 1.25f;
             }
-            if (player.inventory.armorItemInSlot(0).getItem() == ItemRegistry.travellersbootsmkiii) {
+            if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii)) {
                 player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1, 1));
                 player.stepHeight = 1.25f;
             }
-            if (player.inventory.armorItemInSlot(0).getItem() == ItemRegistry.travellersbootsmkiv) {
+            if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv)) {
                 player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1, 3));
                 player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 1, 1));
                 player.stepHeight = 1.25f;
             }
         }
     }
-}
