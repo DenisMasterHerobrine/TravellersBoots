@@ -6,8 +6,6 @@ import com.denismasterherobrine.travellersboots.proxy.ClientProxy;
 import com.denismasterherobrine.travellersboots.proxy.IProxy;
 import com.denismasterherobrine.travellersboots.proxy.ServerProxy;
 import com.denismasterherobrine.travellersboots.register.ItemRegistry;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.model.ModelResourceLocation;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -46,8 +44,6 @@ public class TravellersBoots
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
-        // do something when the server starts
-        LOGGER.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
@@ -63,9 +59,9 @@ public class TravellersBoots
                     ItemRegistry.travellersbootsmkiv = new BootsMaterial(BootMaterialInit.travellersbootsmkiv, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("travellersbootmkiv"))
             );
         }
-    }
     private static ResourceLocation location(String name)
     {
         return new ResourceLocation(MODID, name);
+    }
     }
 }

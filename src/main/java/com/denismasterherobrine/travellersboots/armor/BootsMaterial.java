@@ -1,6 +1,7 @@
 package com.denismasterherobrine.travellersboots.armor;
 
 import com.denismasterherobrine.travellersboots.register.ItemRegistry;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -16,23 +17,37 @@ public class BootsMaterial extends ArmorItem {
         super(material, equipmentSlot, properties);
     }
 
-    @Override
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
-            if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmki))  {
-                player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 0));
+        if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmki)) {
+            player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 0));
+        }
+        if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii)) {
+            player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 0));
+            player.stepHeight = 1.25f;
+        }
+        if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii)) {
+            player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 1));
+            player.stepHeight = 1.25f;
+        }
+        if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv)) {
+            player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 3));
+            player.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 1, 1));
+            player.stepHeight = 1.25f;
+        }
+    }
+
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected) {
+        if (entity instanceof PlayerEntity) {
+            PlayerEntity livingEntity = (PlayerEntity) entity;
+            if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii))) {
+                livingEntity.stepHeight = 0.75f;
             }
-            if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii)) {
-                player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 0));
-                player.stepHeight = 1.25f;
+            if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii))) {
+                livingEntity.stepHeight = 0.75f;
             }
-            if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii)) {
-                player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 1));
-                player.stepHeight = 1.25f;
-            }
-            if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv)) {
-                player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 3));
-                player.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 1, 1));
-                player.stepHeight = 1.25f;
+            if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv))) {
+                livingEntity.stepHeight = 0.75f;
             }
         }
     }
+}
