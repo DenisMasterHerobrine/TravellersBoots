@@ -1,5 +1,6 @@
 package com.denismasterherobrine.travellersboots.armor;
 
+import com.denismasterherobrine.travellersboots.config.Config;
 import com.denismasterherobrine.travellersboots.register.ItemRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,16 +24,22 @@ public class BootsMaterial extends ArmorItem {
         }
         if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii)) {
             player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 0));
-            player.stepHeight = 1.25f;
+            if (Config.isStepHeightEnabled.get()){
+                player.stepHeight = 1.0f;
+            }
         }
         if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii)) {
             player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 1));
-            player.stepHeight = 1.25f;
+            if (Config.isStepHeightEnabled.get()){
+                player.stepHeight = 1.0f;
+            }
         }
         if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv)) {
             player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 3));
             player.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 1, 1));
-            player.stepHeight = 1.25f;
+            if (Config.isStepHeightEnabled.get()){
+                player.stepHeight = 1.0f;
+            }
         }
     }
 
@@ -40,13 +47,19 @@ public class BootsMaterial extends ArmorItem {
         if (entity instanceof PlayerEntity) {
             PlayerEntity livingEntity = (PlayerEntity) entity;
             if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii))) {
-                livingEntity.stepHeight = 0.75f;
+                if (Config.isStepHeightEnabled.get()){
+                    livingEntity.stepHeight = 0.75f;
+                }
             }
             if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii))) {
-                livingEntity.stepHeight = 0.75f;
+                if (Config.isStepHeightEnabled.get()){
+                    livingEntity.stepHeight = 0.75f;
+                }
             }
             if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv))) {
-                livingEntity.stepHeight = 0.75f;
+                if (Config.isStepHeightEnabled.get()){
+                    livingEntity.stepHeight = 0.75f;
+                }
             }
         }
     }
