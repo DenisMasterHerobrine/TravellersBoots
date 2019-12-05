@@ -32,16 +32,16 @@ public class travellersboots extends ItemArmor
             }
             if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii)) {
                 player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1, 0));
-                player.stepHeight = 1.25f;
+                player.stepHeight = 1.0f;
             }
             if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii)) {
                 player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1, 1));
-                player.stepHeight = 1.25f;
+                player.stepHeight = 1.0f;
             }
             if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv)) {
                 player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1, 3));
                 player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 1, 1));
-                player.stepHeight = 1.25f;
+                player.stepHeight = 1.0f;
             }
         }
     }
