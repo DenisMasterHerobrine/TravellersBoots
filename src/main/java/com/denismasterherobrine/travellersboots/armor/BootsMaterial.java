@@ -19,26 +19,34 @@ public class BootsMaterial extends ArmorItem {
     }
 
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
-        if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmki)) {
-            player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 0));
+        if (player.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmki)) {
+            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 1, 0));
         }
-        if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii)) {
-            player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 0));
+        if (player.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmkii)) {
+            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 1, 0));
             if (Config.isStepHeightEnabled.get()){
-                player.stepHeight = 1.0f;
+                player.maxUpStep = 1.0f;
             }
         }
-        if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii)) {
-            player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 1));
+        if (player.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii)) {
+            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 1, 1));
             if (Config.isStepHeightEnabled.get()){
-                player.stepHeight = 1.0f;
+                player.maxUpStep = 1.0f;
             }
         }
-        if (player.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv)) {
-            player.addPotionEffect(new EffectInstance(Effects.SPEED, 1, 3));
-            player.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 1, 1));
+        if (player.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv)) {
+            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 1, 3));
+            player.addEffect(new EffectInstance(Effects.JUMP, 1, 1));
             if (Config.isStepHeightEnabled.get()){
-                player.stepHeight = 1.0f;
+                player.maxUpStep = 1.0f;
+            }
+        }
+
+        if (player.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmkv)) {
+            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 1, 3));
+            player.addEffect(new EffectInstance(Effects.JUMP, 1, 1));
+            if (Config.isStepHeightEnabled.get()){
+                player.maxUpStep = 1.0f;
             }
         }
     }
@@ -46,19 +54,24 @@ public class BootsMaterial extends ArmorItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected) {
         if (entity instanceof PlayerEntity) {
             PlayerEntity livingEntity = (PlayerEntity) entity;
-            if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkii))) {
+            if (!(livingEntity.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmkii))) {
                 if (Config.isStepHeightEnabled.get()){
-                    livingEntity.stepHeight = 0.75f;
+                    livingEntity.maxUpStep = 0.75f;
                 }
             }
-            if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii))) {
+            if (!(livingEntity.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmkiii))) {
                 if (Config.isStepHeightEnabled.get()){
-                    livingEntity.stepHeight = 0.75f;
+                    livingEntity.maxUpStep = 0.75f;
                 }
             }
-            if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv))) {
+            if (!(livingEntity.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmkiv))) {
                 if (Config.isStepHeightEnabled.get()){
-                    livingEntity.stepHeight = 0.75f;
+                    livingEntity.maxUpStep = 0.75f;
+                }
+            }
+            if (!(livingEntity.inventory.armor.get(0).getItem().equals(ItemRegistry.travellersbootsmkv))) {
+                if (Config.isStepHeightEnabled.get()){
+                    livingEntity.maxUpStep = 0.75f;
                 }
             }
         }

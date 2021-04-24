@@ -22,11 +22,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("travellersboots")
 public class TravellersBoots
 {
-    // Directly reference a log4j logger.
+    private static final Logger LOGGER = LogManager.getLogger();
     public static final String MODID = "travellersboots";
     public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
     public TravellersBoots() {
@@ -57,11 +60,13 @@ public class TravellersBoots
         @SubscribeEvent
         public static void RegisterItems(final RegistryEvent.Register<Item> event) {
             event.getRegistry().registerAll(
-                    ItemRegistry.travellersbootsmki = new BootsMaterial(BootMaterialInit.travellersbootsmki, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("travellersbootmki")),
-                    ItemRegistry.travellersbootsmkii = new BootsMaterial(BootMaterialInit.travellersbootsmkii, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("travellersbootmkii")),
-                    ItemRegistry.travellersbootsmkiii = new BootsMaterial(BootMaterialInit.travellersbootsmkiii, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("travellersbootmkiii")),
-                    ItemRegistry.travellersbootsmkiv = new BootsMaterial(BootMaterialInit.travellersbootsmkiv, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("travellersbootmkiv"))
+                    ItemRegistry.travellersbootsmki = new BootsMaterial(BootMaterialInit.travellersbootsmki, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmki")),
+                    ItemRegistry.travellersbootsmkii = new BootsMaterial(BootMaterialInit.travellersbootsmkii, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkii")),
+                    ItemRegistry.travellersbootsmkiii = new BootsMaterial(BootMaterialInit.travellersbootsmkiii, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkiii")),
+                    ItemRegistry.travellersbootsmkiv = new BootsMaterial(BootMaterialInit.travellersbootsmkiv, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkiv")),
+                    ItemRegistry.travellersbootsmkv = new BootsMaterial(BootMaterialInit.travellersbootsmkv, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkv"))
             );
+            LOGGER.info("Successfully completed boots registry with tokens!");
         }
     private static ResourceLocation location(String name)
     {

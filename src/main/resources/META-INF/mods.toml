@@ -17,7 +17,7 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 # The modid of the mod
 modId="travellersboots" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.4.2" #mandatory
+version="1.5.0" #mandatory
  # A display name for the mod
 displayName="Traveller's Boots" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
@@ -41,7 +41,7 @@ This mod adds 4 types of boots
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[27,)" #mandatory
+    versionRange="[34,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
@@ -50,6 +50,6 @@ This mod adds 4 types of boots
 [[dependencies.examplemod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.1]"
+    versionRange="[1.16.4,)"
     ordering="NONE"
     side="BOTH"
