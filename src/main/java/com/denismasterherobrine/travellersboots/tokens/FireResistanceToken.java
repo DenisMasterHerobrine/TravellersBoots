@@ -20,8 +20,8 @@ public class FireResistanceToken extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> p_77624_3_, ITooltipFlag p_77624_4_) {
-        p_77624_3_.add(new StringTextComponent("Combine this token with Traveller's Boots MK5 in Crafting Table (or anything like it) to get permament Fire Resistance while wearing Traveller's Boots MK5"));
-        p_77624_3_.add(new StringTextComponent("This is NOT permament effect till the end of the game!"));
+    public void appendHoverText(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> tooltip, ITooltipFlag tooltipFlag) {
+        tooltip.add(new StringTextComponent("Combine this token with Traveller's Boots MK5 in Crafting Table (or anything like it) to get permament Fire Resistance while wearing Traveller's Boots MK5."));
+        tooltip.add(new StringTextComponent("This is NOT permament effect till the end of the game!"));
     }
 }

@@ -7,6 +7,9 @@ import com.denismasterherobrine.travellersboots.proxy.ClientProxy;
 import com.denismasterherobrine.travellersboots.proxy.IProxy;
 import com.denismasterherobrine.travellersboots.proxy.ServerProxy;
 import com.denismasterherobrine.travellersboots.register.ItemRegistry;
+import com.denismasterherobrine.travellersboots.tokens.FireResistanceToken;
+import com.denismasterherobrine.travellersboots.tokens.NetheriteJumpBoostControllerToken;
+import com.denismasterherobrine.travellersboots.tokens.NetheriteSpeedControllerToken;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -64,8 +67,12 @@ public class TravellersBoots
                     ItemRegistry.travellersbootsmkii = new BootsMaterial(BootMaterialInit.travellersbootsmkii, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkii")),
                     ItemRegistry.travellersbootsmkiii = new BootsMaterial(BootMaterialInit.travellersbootsmkiii, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkiii")),
                     ItemRegistry.travellersbootsmkiv = new BootsMaterial(BootMaterialInit.travellersbootsmkiv, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkiv")),
-                    ItemRegistry.travellersbootsmkv = new BootsMaterial(BootMaterialInit.travellersbootsmkv, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkv"))
-            );
+                    ItemRegistry.travellersbootsmkv = new BootsMaterial(BootMaterialInit.travellersbootsmkv, EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)).setRegistryName(location("travellersbootmkv")),
+
+                    ItemRegistry.fireresistancetoken = new FireResistanceToken().setRegistryName(location("fireresistancetoken")),
+                    ItemRegistry.jumpboosteffectcontrollertoken = new NetheriteJumpBoostControllerToken().setRegistryName(location("jumpboosteffectcontrollertoken")),
+                    ItemRegistry.speedeffectcontrollertoken = new NetheriteSpeedControllerToken().setRegistryName(location("speedeffectcontrollertoken")));
+
             LOGGER.info("Successfully completed boots registry with tokens!");
         }
     private static ResourceLocation location(String name)

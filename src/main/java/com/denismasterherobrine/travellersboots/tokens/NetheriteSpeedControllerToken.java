@@ -20,8 +20,8 @@ public class NetheriteSpeedControllerToken extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> p_77624_3_, ITooltipFlag p_77624_4_) {
-        p_77624_3_.add(new StringTextComponent("Combine this token with Traveller's Boots MK5 in Crafting Table (or anything like it) to get controllable Speed effect while wearing Traveller's Boots MK5"));
-        p_77624_3_.add(new StringTextComponent("You can switch Speed level by pressing " + "L" + " while wearing Traveller's Boots MK5"));
+    public void appendHoverText(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> tooltip, ITooltipFlag tooltipFlag) {
+        tooltip.add(new StringTextComponent("Combine this token with Traveller's Boots MK5 in Crafting Table (or anything like it) to get controllable Speed effect while wearing Traveller's Boots MK5."));
+        tooltip.add(new StringTextComponent("You can switch Speed level by pressing " + "L" + " while wearing Traveller's Boots MK5!"));
     }
 }
