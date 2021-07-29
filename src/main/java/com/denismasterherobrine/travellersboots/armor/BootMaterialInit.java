@@ -1,17 +1,17 @@
 package com.denismasterherobrine.travellersboots.armor;
 
 import com.denismasterherobrine.travellersboots.TravellersBoots;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public enum BootMaterialInit implements IArmorMaterial {
+public enum BootMaterialInit implements ArmorMaterial {
     travellersbootsmki("travellersbootsmki", 50, new int[] {1, 0, 0, 0}, 4, 0, "item.armor.equip_leather", 0.0f, Items.LEATHER),
     travellersbootsmkii("travellersbootsmkii", 100, new int[] {2, 0, 0, 0}, 8, 0, "item.armor.equip_leather", 0.0f, Items.GOLD_INGOT),
     travellersbootsmkiii("travellersbootsmkiii", 150, new int[] {4, 0, 0, 0}, 12, 0.005f, "item.armor.equip_leather", 0.0f, Items.DIAMOND),
@@ -37,12 +37,12 @@ public enum BootMaterialInit implements IArmorMaterial {
     }
 
     @Override
-    public int getDurabilityForSlot(EquipmentSlotType p_200896_1_) {
+    public int getDurabilityForSlot(EquipmentSlot p_200896_1_) {
         return this.durability;
     }
 
     @Override
-    public int getDefenseForSlot(EquipmentSlotType p_200902_1_) {
+    public int getDefenseForSlot(EquipmentSlot p_200902_1_) {
         return this.damageReductionAmountArray[p_200902_1_.getIndex()];
     }
 

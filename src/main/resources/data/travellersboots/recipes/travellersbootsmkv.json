@@ -1,20 +1,10 @@
 {
-  "type": "crafting_shaped",
-  "pattern": [
-    "NTN",
-    "NBN",
-    "   "
-  ],
-  "key": {
-    "N": {
-      "item": "minecraft:netherite_ingot"
-    },
-    "B": {
-      "item": "minecraft:gilded_blackstone"
-    },
-    "T": {
-      "item": "travellersboots:travellersbootmkiv"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "travellersboots:travellersbootmkiv"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
   },
   "result": {
     "item": "travellersboots:travellersbootmkv",
@@ -23,3 +13,4 @@
     "enchant_lvl": 3
   }
 }
+
