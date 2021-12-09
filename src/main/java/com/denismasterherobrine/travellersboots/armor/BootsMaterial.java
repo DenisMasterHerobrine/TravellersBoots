@@ -2,8 +2,7 @@ package com.denismasterherobrine.travellersboots.armor;
 
 import com.denismasterherobrine.travellersboots.config.Config;
 import com.denismasterherobrine.travellersboots.register.ItemRegistry;
-import com.mojang.blaze3d.shaders.Effect;
-import net.minecraft.client.renderer.EffectInstance;
+
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
