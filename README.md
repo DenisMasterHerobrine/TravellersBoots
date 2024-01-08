@@ -2,8 +2,12 @@
 [![CurseForge](https://cf.way2muchnoise.eu/versions/travellers-boots.svg)](https://www.curseforge.com/minecraft/mc-mods/travellers-boots)
 ![https://github.com/DenisMasterHerobrine/TravellersBoots](https://img.shields.io/github/license/DenisMasterHerobrine/TravellersBoots) 
 ![https://github.com/DenisMasterHerobrine/TravellersBoots](https://img.shields.io/github/issues/denismasterherobrine/TravellersBoots)
+
+# This repository is archived. This version of the mod is no longer updated nor supported. If you need support or want to see a continuation, [go here.](https://github.com/DenisMasterHerobrine/TravellersBootsReloaded)
+
 <div align="center"> <h1>  Traveller's Boots </h1> </div>
 <div align="center"> This small mod adds 5 types of boots, which can help you to speed up exploring the world and gives you speed or increases your step height. </div>
+<br>
 
 # Information
 Ever wanted to travel without flight, but through walking? Then this mod is for you. Craft boots, make yourself faster than before. Travel through Caves and Cliffs without any problems of boring jumping.
